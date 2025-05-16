@@ -1,71 +1,71 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Impacto do Desmatamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>As Consequências Alarmantes do Desmatamento</h1>
+    </header>
 
-# Criando um conjunto de dados fictício sobre o impacto do desmatamento
-dados = {
-    'Ano': [2000, 2005, 2010, 2015, 2020],
-    'Área Desmatada (milhões de hectares)': [10, 12, 14, 18, 25],
-    'Emissões de CO2 (milhões de toneladas)': [50, 55, 60, 70, 95],
-    'Número de Espécies Ameaçadas': [200, 220, 250, 300, 350],
-    'Temperatura Média (°C)': [0.4, 0.45, 0.5, 0.55, 0.6]  # Temperatura média global aumentada por causa do desmatamento
-}
+    <main>
+        <section id="biodiversidade">
+            <h2>Perda da Biodiversidade</h2>
+            <p>O desmatamento é uma das principais causas da extinção de espécies vegetais e animais, levando à perda irreparável da biodiversidade do nosso planeta.</p>
+            <ul>
+                <li>Destruição de habitats naturais.</li>
+                <li>Interrupção de cadeias alimentares.</li>
+                <li>Aumento do risco de extinção de espécies endêmicas.</li>
+            </ul>
+        </section>
 
-# Convertendo para um DataFrame
-df = pd.DataFrame(dados)
+        <section id="clima">
+            <h2>Impactos no Clima</h2>
+            <p>As florestas desempenham um papel fundamental na regulação do clima global. O desmatamento contribui significativamente para as mudanças climáticas.</p>
+            <ul>
+                <li>Liberação de grandes quantidades de dióxido de carbono (CO₂) na atmosfera.</li>
+                <li>Redução da capacidade de absorção de CO₂ pelas árvores.</li>
+                <li>Alterações nos padrões de chuva e aumento do risco de secas.</li>
+            </ul>
+        </section>
 
-# Exibindo os dados no terminal
-print("Dados sobre o impacto do desmatamento:")
-print(df)
+        <section id="solo-agua">
+            <h2>Degradação do Solo e dos Recursos Hídricos</h2>
+            <p>A remoção da cobertura vegetal afeta a qualidade do solo e a disponibilidade de água.</p>
+            <ul>
+                <li>Aumento da erosão do solo e do assoreamento de rios.</li>
+                <li>Diminuição da infiltração de água no solo, afetando os lençóis freáticos.</li>
+                <li>Maior risco de deslizamentos de terra e inundações.</li>
+            </ul>
+        </section>
 
-# Gráfico 1: Área desmatada ao longo do tempo
-plt.figure(figsize=(10, 6))
-plt.plot(df['Ano'], df['Área Desmatada (milhões de hectares)'], marker='o', color='g', label='Área Desmatada')
-plt.title('Área Desmatada ao Longo do Tempo')
-plt.xlabel('Ano')
-plt.ylabel('Área Desmatada (milhões de hectares)')
-plt.grid(True)
-plt.legend()
-plt.show()
+        <section id="sociedade">
+            <h2>Impactos Socioeconômicos</h2>
+            <p>O desmatamento afeta diretamente as comunidades locais e a economia.</p>
+            <ul>
+                <li>Deslocamento de populações indígenas e comunidades tradicionais.</li>
+                <li>Perda de meios de subsistência dependentes da floresta.</li>
+                <li>Conflitos por recursos naturais.</li>
+            </ul>
+        </section>
 
-# Gráfico 2: Emissões de CO2 devido ao desmatamento
-plt.figure(figsize=(10, 6))
-plt.plot(df['Ano'], df['Emissões de CO2 (milhões de toneladas)'], marker='o', color='r', label='Emissões de CO2')
-plt.title('Emissões de CO2 ao Longo do Tempo')
-plt.xlabel('Ano')
-plt.ylabel('Emissões de CO2 (milhões de toneladas)')
-plt.grid(True)
-plt.legend()
-plt.show()
+        <section id="o-que-fazer">
+            <h2>O Que Podemos Fazer?</h2>
+            <p>Ainda há tempo para reverter e mitigar os impactos do desmatamento. Algumas ações importantes incluem:</p>
+            <ul>
+                <li>Apoiar iniciativas de conservação e reflorestamento.</li>
+                <li>Consumir produtos de origem sustentável.</li>
+                <li>Cobrar ações de governos e empresas.</li>
+                <li>Informar e conscientizar outras pessoas sobre o tema.</li>
+            </ul>
+        </section>
+    </main>
 
-# Gráfico 3: Número de espécies ameaçadas
-plt.figure(figsize=(10, 6))
-plt.plot(df['Ano'], df['Número de Espécies Ameaçadas'], marker='o', color='b', label='Espécies Ameaçadas')
-plt.title('Número de Espécies Ameaçadas ao Longo do Tempo')
-plt.xlabel('Ano')
-plt.ylabel('Número de Espécies Ameaçadas')
-plt.grid(True)
-plt.legend()
-plt.show()
-
-# Gráfico 4: Aumento da Temperatura Média Global
-plt.figure(figsize=(10, 6))
-plt.plot(df['Ano'], df['Temperatura Média (°C)'], marker='o', color='orange', label='Temperatura Média Global')
-plt.title('Aumento da Temperatura Global devido ao Desmatamento')
-plt.xlabel('Ano')
-plt.ylabel('Temperatura Média (°C)')
-plt.grid(True)
-plt.legend()
-plt.show()
-
-# Mostrar o impacto do desmatamento em um único gráfico (comparativo)
-plt.figure(figsize=(10, 6))
-plt.plot(df['Ano'], df['Área Desmatada (milhões de hectares)'], marker='o', color='g', label='Área Desmatada')
-plt.plot(df['Ano'], df['Emissões de CO2 (milhões de toneladas)'], marker='o', color='r', label='Emissões de CO2')
-plt.plot(df['Ano'], df['Número de Espécies Ameaçadas'], marker='o', color='b', label='Espécies Ameaçadas')
-plt.plot(df['Ano'], df['Temperatura Média (°C)'], marker='o', color='orange', label='Temperatura Média Global')
-plt.title('Impacto do Desmatamento ao Longo do Tempo')
-plt.xlabel('Ano')
-plt.ylabel('Valores')
-plt.grid(True)
-plt.legend()
-plt.show()
+    <footer>
+        <p>&copy; 2025 Impacto do Desmatamento</p>
+    </footer>
+</body>
+</html>
